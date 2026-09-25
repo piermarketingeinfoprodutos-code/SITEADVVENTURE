@@ -1,3 +1,3 @@
 # AdvVenture
 
-Landing page responsiva e simulador ilustrativo para advogados. Arquivos estáticos na raiz. Publicação pelo GitHub Pages.
+Site responsivo com simulador ilustrativo e oferta de abertura de CNPJ. Arquivos estáticos na raiz, publicados pelo GitHub Pages. Checkout Asaas configurado em config.js.
