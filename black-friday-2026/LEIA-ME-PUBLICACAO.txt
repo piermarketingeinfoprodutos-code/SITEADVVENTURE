@@ -1,0 +1,86 @@
+PÁGINA BLACK FRIDAY 2026 VERSÃO FINAL ADVENTURE
+Marca apresentada na página: Advventure Contabilidade.
+
+1. COMO PUBLICAR NO DOMÍNIO
+Extraia o ZIP. Envie o CONTEÚDO desta pasta para a pasta pública do domínio
+(normalmente public_html, www ou equivalente) ou para uma subpasta de campanha.
+Mantenha index.html na raiz da pasta de destino e preserve a pasta assets/.
+Os caminhos são relativos: a página funciona tanto na raiz quanto em subpasta.
+Se já houver um site no domínio, use uma subpasta ou faça backup antes de substituir arquivos.
+
+Não é necessário Node, Python, npm, WordPress, compilação, banco de dados ou acesso
+ao computador onde a página foi criada. Basta hospedagem de arquivos estáticos.
+Fontes, imagens, carimbo, estilos e scripts estão dentro deste pacote.
+O simulador roda no navegador, sem enviar os valores informados a um servidor.
+
+2. CONFIGURAR LINKS (ARQUIVO config.js)
+Abra config.js em um editor de texto e preencha:
+checkoutUrl: checkout ASAAS específico da abertura na Black Friday.
+migrationUrl: link de atendimento da migração.
+consultantUrl: WhatsApp ou contato do botão flutuante.
+termsUrl: link dos Termos de Uso ou caminho de arquivo que você incluir no pacote.
+privacyUrl: link da Política de Privacidade ou caminho de arquivo que você incluir.
+
+Use links completos https://. Para WhatsApp, use um link https://wa.me/ com o número
+correto, confirmado pela equipe. Não há número nem checkout de outra oferta embutido.
+Se migrationUrl ficar vazio, a migração usará consultantUrl quando preenchido.
+Se um destino ficar vazio, o botão mostra aviso provisório, sem redirecionar.
+Depois de validar a campanha, troque reviewMode: true por reviewMode: false.
+Isso remove a faixa inferior de aprovação. Não altera os destinos dos botões.
+
+3. AJUSTAR PREÇOS
+Em config.js:
+originalPrice: 600
+openingPrice: 420
+installments: 6
+illustrativeInstallment: 70
+Esses campos atualizam os números destacados exclusivamente na seção de ofertas.
+A primeira dobra não apresenta valores de total ou parcela.
+O parcelamento é ilustrativo e está sinalizado com asterisco. Confirme os valores
+reais e as formas de pagamento com a equipe e o checkout antes do lançamento.
+O parcelamento no cartão tem juros; os valores definitivos serão informados no checkout.
+Taxas oficiais são separadas. A migração só é cobrada a partir do segundo mês.
+Se mudar as condições comerciais, revise também o texto do FAQ e das demais seções
+em index.html, além dos destaques de 30% OFF e do carimbo.
+
+4. EDITAR CONTEÚDO E VISUAL
+index.html: toda a copy e a estrutura da página, com seções bloco-1 a bloco-14.
+style.css: estrutura e estilos de base.
+final.css: direção visual final, fontes, carimbo, simulador e responsividade.
+final-app.js: botões, modal provisório, abas e interface do simulador.
+calculo.js: cálculo ilustrativo de IRPF e DAS.
+config.js: links, preços e modo de aprovação.
+assets/: imagens, carimbo SVG editável e fontes locais com licenças.
+assets/originais/: foto original fornecida, para futuras edições.
+
+O site usa a bio fornecida pelo cliente: mais de 20 anos de atuação e reconhecimento
+pela Best Lawyers por sete anos consecutivos, de 2020 a 2026. Os selos são os arquivos
+fornecidos. Não foram inventados depoimentos. As imagens do calendário e dos avatares
+são ilustrações geradas; os avatares não representam clientes nem depoimentos.
+A foto da capa foi preparada a partir da foto oficial sorrindo enviada pelo cliente.
+
+5. SIMULADOR
+Referência tributária: 2026. Não é uma projeção automática das regras de 2027.
+Compara IRPF mensal com desconto simplificado e DAS do Anexo IV.
+Não representa economia líquida total. Premissas e limitações estão visíveis na página.
+As referências oficiais são links de consulta; a execução não depende delas.
+Valores de referência verificados:
+R$ 5.000/mês: IRPF R$ 0; DAS R$ 225. O site mostra que o IRPF é menor nesse recorte.
+R$ 20.000/mês: IRPF R$ 4.424,29; DAS R$ 1.125; diferença parcial R$ 3.299,29.
+O cálculo usa recebimentos constantes e receita de referência igual a 12 meses.
+
+6. ANTES DE LANÇAR
+Preencher os links finais e testar abertura, migração e botão flutuante.
+Inserir Termos de Uso e Política de Privacidade definitivos.
+Confirmar preços, parcelamento e formas de pagamento no checkout.
+Validar as condições contratuais e a tabela de reembolso parcial de R$ 420,
+pendência já indicada no briefing fornecido.
+Revisar as afirmações tributárias de 2027 com a equipe técnica antes da campanha.
+Ativar HTTPS no domínio pelo painel da hospedagem.
+O HTML contém noindex,nofollow porque esta é a página preparada para aprovação.
+Se quiser indexação após o lançamento, remova essa meta tag em index.html.
+
+7. CONFERÊNCIA
+O arquivo MANIFESTO-SHA256.txt lista os arquivos e seus hashes para conferência.
+O ZIP inclui todos os recursos usados no carregamento da página.
+Nenhum arquivo precisa ser obtido no computador de origem.
