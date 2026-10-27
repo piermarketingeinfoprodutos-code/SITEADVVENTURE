@@ -84,3 +84,11 @@ Se quiser indexação após o lançamento, remova essa meta tag em index.html.
 O arquivo MANIFESTO-SHA256.txt lista os arquivos e seus hashes para conferência.
 O ZIP inclui todos os recursos usados no carregamento da página.
 Nenhum arquivo precisa ser obtido no computador de origem.
+
+ATUALIZAÇÃO FINAL DA COPY E DO VISUAL
+COPY-FINAL.md contém a copy consolidada e editável. A página tem 13 seções numeradas.
+A segunda seção reúne CPF (vermelho), Simples Nacional (azul), contexto de 2027 e simulador.
+O antigo bloco de CNPJ técnico foi removido. O simulador começa em R$ 10 mil.
+approved.css concentra a revisão de tipografia Manrope, legibilidade e capa com foto ampliada.
+O modo público não utiliza a expressão Black Friday antecipada.
+

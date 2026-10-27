@@ -6,7 +6,7 @@ root=Path(__file__).parent
 name='Página Black Friday 2026 versão final Adventure'
 destination=root.parent/'entrega-final'/name
 destination.mkdir(parents=True,exist_ok=True)
-files=['index.html','style.css','final.css','final-app.js','calculo.js','config.js','LEIA-ME-PUBLICACAO.txt']
+files=['index.html','style.css','final.css','approved.css','final-app.js','calculo.js','config.js','LEIA-ME-PUBLICACAO.txt','COPY-FINAL.md']
 assets=['logo-campanha.png','gabriel-sorriso-recortado.png','gabriel-serio.jpeg','estrutura-contabil.png','janeiro-2027.png','advogado-comparativo.png','best-lawyers-2020-2026.png','carimbo-30-off.svg','fonts/anton.ttf','fonts/manrope.ttf','fonts/anton-OFL.txt','fonts/manrope-OFL.txt']
 for f in files:
     shutil.copy2(root/f,destination/f)
@@ -22,13 +22,15 @@ class References(HTMLParser):
         for k,v in attrs:
             if k in ('src','href') and v and not v.startswith(('#','http','mailto:','tel:')):self.refs.append(v)
 parser=References();content=(destination/'index.html').read_text(encoding='utf-8');parser.feed(content)
-assert len(re.findall(r'<section\b',content))==15
+assert len(re.findall(r'<section\b',content))==13
+assert 'data-amount="5000"' not in content
+assert 'min="10000"' in content
 assert not re.search(r'sem juros|2020 a 2024|class="timeline"|data-preview',content,re.I)
 assert not re.search(r'[CG]:[\\/]|file://|localhost|127\.0\.0\.1',content)
-hero=re.search(r'<section class="hero">.*?</section>',content,re.S).group(0)
+hero=re.search(r'<section class="hero[^\"]*">.*?</section>',content,re.S).group(0)
 assert not re.search(r'R\$|data-installment|data-total|cash-price',hero)
 refs=parser.refs[:]
-for f in ['style.css','final.css']:
+for f in ['style.css','final.css','approved.css']:
     for value in re.findall(r'url\([\'"]?([^\)\'\"]+)',(destination/f).read_text(encoding='utf-8')):
         if not value.startswith(('http','data:')): refs.append(value)
 missing=[f for f in refs if not (destination/f).is_file()]

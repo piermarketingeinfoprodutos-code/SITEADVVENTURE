@@ -73,5 +73,7 @@ footer='''</main><footer><div class="wrap footer-inner"><img src="assets/logo-ca
 doc='<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#02040b"><meta name="description" content="Super Black Friday Advventure 2026. Abertura de CNPJ com 30% OFF ou migração com o primeiro mês de contabilidade grátis."><title>Super Black Friday 2026 | Advventure Contabilidade</title><link rel="stylesheet" href="style.css"></head><body>'+hero+''.join(blocks)+footer+'</body></html>'
 from finalize import apply
 doc=apply(doc)
+from approved import render
+doc=render(doc)
 (root/'index.html').write_text(doc,encoding='utf-8')
 print('Built index.html: 14 content sections + hero; '+str(len(doc))+' characters')
