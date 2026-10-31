@@ -65,3 +65,9 @@ h3{font-weight:800;line-height:1.25}
   .approved-body>p,.offer p{font-size:16px}
   .eyebrow{font-size:11px}
 }
+
+/* sem brilho atrás/sobre a foto do Gabriel no topo (pedido em 31/10/2026) */
+.hero,.hero.approved-hero{background:#080808}
+.hero-art .halo{display:none}
+.hero-art>.gabriel-hero{mix-blend-mode:normal}
+@media (max-width:650px){.hero,.hero.approved-hero{background:#080808}}
