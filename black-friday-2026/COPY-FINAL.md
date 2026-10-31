@@ -1,3 +1,5 @@
+> COPY FINAL V2 · atualizada em 31/10/2026 após a revisão do cliente: parcela no cartão de 6x R$ 72,61, janelas de pagamento e de plano com os links do Asaas, bloco "Ainda está com dúvida?" com WhatsApp e identidade tipográfica da Pier.
+
 ## 1. CAPA
 
 BLACK FRIDAY ADVVENTURE
@@ -323,13 +325,21 @@ Na migração, a cobrança começa somente no segundo mês.
 
 Rodapé: Advventure Contabilidade. Contabilidade feita para advogados, idealizada por Gabriel Quintanilha.
 
-Termos de Uso · Política de Privacidade
+Termos de Uso · Política de Privacidade (ocultos enquanto a Advventure não tiver essas páginas)
 
-Botão flutuante: Conversar com um consultor.
+Texto da oferta de abertura: Em até 6x no cartão, de R$ 72,61*. De R$ 600 por R$ 420 no Pix ou boleto.
 
-Texto da oferta de abertura: Em até 6x de R$ 70*. De R$ 600 por R$ 420 no Pix ou boleto.
+*No cartão, o parcelamento inclui as taxas da operadora: 6x de R$ 72,61, total de R$ 435,66. No Pix ou boleto, o valor é R$ 420.
 
-*R$ 70 é uma referência provisória de parcela. O parcelamento no cartão tem juros. O valor definitivo das parcelas e o total financiado serão apresentados no checkout, conforme a opção escolhida. O honorário de abertura não inclui taxas da OAB, Prefeitura e demais órgãos, cobradas à parte.
+O honorário de abertura não inclui taxas da OAB, Prefeitura e demais órgãos, cobradas à parte.
+
+Bloco abaixo das ofertas: **Ainda está com dúvida?** Você pode garantir a condição agora, no pagamento, e falar com o consultor depois. Se preferir tirar a dúvida antes, chame a gente no WhatsApp. [CTA consultor|Falar com um consultor] → WhatsApp (11) 99514-8774.
+
+Janela da abertura (ao clicar em qualquer botão de abertura): BLACK FRIDAY ADVVENTURE · **Como você prefere pagar?** Abertura de CNPJ com 30% OFF. Opções: [Cartão de crédito · em até 6x de R$ 72,61] e [Pix ou boleto · R$ 420,00 à vista]. Nota: As taxas da OAB e da Prefeitura são pagas à parte, direto aos órgãos.
+
+Janela da migração (ao clicar em qualquer botão de migração): BLACK FRIDAY ADVVENTURE · **Qual é o seu plano?** Primeiro mês por nossa conta: a cobrança começa no segundo mês. Opções: [Plano Padrão · R$ 189 por mês] e [Convênio OAB/RJ, MG, SC ou PE · R$ 159 por mês].
+
+Botões "Quero uma contabilidade especializada" e "Quero conhecer a Advventure": levam até as ofertas. O botão flutuante de consultor foi removido.
 
 Texto da comparação vermelha — CPF: IRPF progressivo até 27,5%; despesas dedutíveis e livro-caixa podem reduzir a base; obrigações fiscais e previdenciárias da pessoa física; estrutura deve ser avaliada individualmente.
 
