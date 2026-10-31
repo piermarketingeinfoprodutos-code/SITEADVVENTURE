@@ -6,7 +6,7 @@ root=Path(__file__).parent
 name='Página Black Friday 2026 versão final Adventure'
 destination=root.parent/'entrega-final'/name
 destination.mkdir(parents=True,exist_ok=True)
-files=['index.html','style.css','final.css','approved.css','final-app.js','calculo.js','config.js','LEIA-ME-PUBLICACAO.txt','COPY-FINAL.md']
+files=['index.html','style.css','final.css','approved.css','pier.css','final-app.js','calculo.js','config.js','LEIA-ME-PUBLICACAO.txt','COPY-FINAL.md']
 assets=['logo-campanha.png','gabriel-sorriso-recortado.png','gabriel-serio.jpeg','estrutura-contabil.png','janeiro-2027.png','advogado-comparativo.png','best-lawyers-2020-2026.png','carimbo-30-off.svg','fonts/anton.ttf','fonts/manrope.ttf','fonts/anton-OFL.txt','fonts/manrope-OFL.txt']
 for f in files:
     shutil.copy2(root/f,destination/f)
@@ -30,10 +30,10 @@ assert not re.search(r'[CG]:[\\/]|file://|localhost|127\.0\.0\.1',content)
 hero=re.search(r'<section class="hero[^\"]*">.*?</section>',content,re.S).group(0)
 assert not re.search(r'R\$|data-installment|data-total|cash-price',hero)
 refs=parser.refs[:]
-for f in ['style.css','final.css','approved.css']:
+for f in ['style.css','final.css','approved.css','pier.css']:
     for value in re.findall(r'url\([\'"]?([^\)\'\"]+)',(destination/f).read_text(encoding='utf-8')):
         if not value.startswith(('http','data:')): refs.append(value)
-missing=[f for f in refs if not (destination/f).is_file()]
+missing=[f for f in refs if not (destination/f.split('?')[0]).is_file()]
 assert not missing,missing
 manifest=[]
 for f in sorted(destination.rglob('*')):

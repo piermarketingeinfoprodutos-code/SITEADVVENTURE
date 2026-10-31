@@ -13,32 +13,35 @@ ao computador onde a página foi criada. Basta hospedagem de arquivos estáticos
 Fontes, imagens, carimbo, estilos e scripts estão dentro deste pacote.
 O simulador roda no navegador, sem enviar os valores informados a um servidor.
 
-2. CONFIGURAR LINKS (ARQUIVO config.js)
-Abra config.js em um editor de texto e preencha:
-checkoutUrl: checkout ASAAS específico da abertura na Black Friday.
-migrationUrl: link de atendimento da migração.
-consultantUrl: WhatsApp ou contato do botão flutuante.
-termsUrl: link dos Termos de Uso ou caminho de arquivo que você incluir no pacote.
-privacyUrl: link da Política de Privacidade ou caminho de arquivo que você incluir.
+2. CONFIGURAR LINKS (ARQUIVO config.js) — ATUALIZADO EM 31/10/2026
+Os links reais já estão preenchidos em config.js:
+cardUrl: Asaas da abertura no CARTÃO (em até 6x de R$ 72,61).
+pixUrl: Asaas da abertura no PIX OU BOLETO (R$ 420).
+monthlyUrl: Asaas da contabilidade mensal, Plano Padrão (R$ 189).
+monthlyOabUrl: Asaas da contabilidade mensal com convênio OAB (R$ 159).
+consultantUrl: WhatsApp do comercial (11) 99514-8774, usado só no bloco
+"Ainda está com dúvida?", logo abaixo das ofertas.
+termsUrl e privacyUrl: vazios (o site da Advventure não tem essas páginas).
+Enquanto estiverem vazios, os botões de Termos e Privacidade ficam ocultos no rodapé.
 
-Use links completos https://. Para WhatsApp, use um link https://wa.me/ com o número
-correto, confirmado pela equipe. Não há número nem checkout de outra oferta embutido.
-Se migrationUrl ficar vazio, a migração usará consultantUrl quando preenchido.
-Se um destino ficar vazio, o botão mostra aviso provisório, sem redirecionar.
-Depois de validar a campanha, troque reviewMode: true por reviewMode: false.
-Isso remove a faixa inferior de aprovação. Não altera os destinos dos botões.
+Como os botões funcionam:
+- Botões de ABERTURA abrem uma janela "Como você prefere pagar?" com duas opções:
+  cartão (cardUrl) ou Pix/boleto (pixUrl).
+- Botões de MIGRAÇÃO abrem a janela "Qual é o seu plano?" com Plano Padrão
+  (monthlyUrl) ou convênio OAB (monthlyOabUrl).
+- "Quero uma contabilidade especializada" e "Quero conhecer a Advventure" levam
+  até as ofertas. O botão flutuante de consultor foi removido para não
+  sobrecarregar o comercial.
+reviewMode: false (cliente aprovou em 31/10/2026; a faixa de aprovação não aparece).
 
 3. AJUSTAR PREÇOS
 Em config.js:
 originalPrice: 600
 openingPrice: 420
 installments: 6
-illustrativeInstallment: 70
-Esses campos atualizam os números destacados exclusivamente na seção de ofertas.
-A primeira dobra não apresenta valores de total ou parcela.
-O parcelamento é ilustrativo e está sinalizado com asterisco. Confirme os valores
-reais e as formas de pagamento com a equipe e o checkout antes do lançamento.
-O parcelamento no cartão tem juros; os valores definitivos serão informados no checkout.
+illustrativeInstallment: 72.61   (parcela no cartão com as taxas, informada pela Advventure)
+cardTotal: 435.66
+O texto do asterisco do card fica em index.html (procure "435,66").
 Taxas oficiais são separadas. A migração só é cobrada a partir do segundo mês.
 Se mudar as condições comerciais, revise também o texto do FAQ e das demais seções
 em index.html, além dos destaques de 30% OFF e do carimbo.
@@ -46,8 +49,10 @@ em index.html, além dos destaques de 30% OFF e do carimbo.
 4. EDITAR CONTEÚDO E VISUAL
 index.html: toda a copy e a estrutura da página, com seções bloco-1 a bloco-14.
 style.css: estrutura e estilos de base.
-final.css: direção visual final, fontes, carimbo, simulador e responsividade.
-final-app.js: botões, modal provisório, abas e interface do simulador.
+final.css: direção visual final, carimbo, simulador e responsividade.
+pier.css: identidade Pier (fontes Unbounded, Quicksand e Nunito, botões, cards e espaçamentos). Carregado por último.
+As fontes vêm do Google Fonts (precisa de internet).
+final-app.js: botões, janelas de pagamento e de plano, abas e interface do simulador.
 calculo.js: cálculo ilustrativo de IRPF e DAS.
 config.js: links, preços e modo de aprovação.
 assets/: imagens, carimbo SVG editável e fontes locais com licenças.

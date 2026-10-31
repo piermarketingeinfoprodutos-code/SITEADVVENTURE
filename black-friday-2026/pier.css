@@ -1,0 +1,67 @@
+/* Identidade tipográfica e de componentes da Pier (mesma família das LPs de Black Friday da Pier).
+   As cores continuam as da Advventure: preto-azulado + dourado. Carregar por último. */
+:root{--f-t:"Unbounded",system-ui,sans-serif;--f-s:"Quicksand",system-ui,sans-serif;--f-b:"Nunito",system-ui,sans-serif}
+body{font-family:var(--f-b);font-weight:500;font-size:17px;line-height:1.65}
+h1,h2,h3,.statement,.installment-price>strong,.offer-price strong,.offer-price.small strong,.calculated-differ,.difference strong,.simulation strong{font-family:var(--f-t);letter-spacing:-.01em}
+h1,.hero-copy h1{font-weight:900;text-transform:uppercase;line-height:1.04}
+h2,.approved-body>h2{font-weight:800;line-height:1.12;text-transform:none}
+h3{font-weight:800;line-height:1.25}
+.hero-copy h1{font-size:clamp(28px,3.6vw,50px);margin:16px 0 18px}
+.approved-body>h2,.editorial h2,.sim-heading h2{font-size:clamp(26px,3.4vw,44px)}
+.approved-body>h3,.paths h2,.paths h3,.process-grid h3,.offer h3{font-size:clamp(19px,1.9vw,24px)}
+.authority h2{font-size:clamp(26px,3vw,38px)}
+.closing h2{font-size:clamp(28px,4.2vw,54px);text-transform:uppercase;font-weight:900;line-height:1.05}
+.statement{font-weight:800;line-height:1.25}
+.approved-body>p,.offer p{font-family:var(--f-b);font-size:17px;line-height:1.75}
+
+/* eyebrow e selos no padrão Pier */
+.eyebrow,.hero-eyebrow,.offer-tag,.path-no,.marquee{font-family:var(--f-s);font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.eyebrow{font-size:13px;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.hero-copy>.eyebrow,.hero-eyebrow{font-size:12px}
+.marquee{font-size:13px}
+
+/* botões: pílula, caixa alta, Unbounded */
+.cta,.hero-copy .cta,.paths .cta,.closing .cta,.offer .cta,.offer-ribbon .cta{font-family:var(--f-t);font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(13px,1.2vw,15px);line-height:1.25;border-radius:999px;padding:19px 30px;min-height:58px;text-wrap:balance;transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px)}
+.cta:focus-visible,.pay-option:focus-visible{outline:3px solid #f3cf75;outline-offset:3px}
+
+/* cards e espaçamento */
+.offers .offer,.offer,.paths article,.cases article,.guarantees>div{border-radius:26px}
+.offer{padding:clamp(26px,3vw,40px)}
+.offer .installment-price>strong{font-weight:900;font-size:clamp(46px,5vw,66px);letter-spacing:-.02em}
+.offer .installment-price>span{font-family:var(--f-s);font-weight:700;font-size:14px;max-width:130px;line-height:1.35}
+.offer .cash-price{font-size:16px}
+.offer .payment-note{font-size:13px;line-height:1.7}
+.offer .approved-list{font-size:16px}
+.section{padding-block:clamp(64px,8vw,104px)}
+
+/* bloco "ainda está com dúvida?" abaixo das ofertas */
+.duvida{margin:34px auto 0;max-width:760px;text-align:center;border:1px solid #e4cc9840;border-radius:26px;padding:28px 26px;background:linear-gradient(100deg,#1a150c,#0f0e0b)}
+.duvida h3{font-size:clamp(19px,2vw,24px);margin:0 0 6px}
+.duvida p{font-size:15px;color:#c9bea8;margin:0 0 18px}
+.duvida .cta{display:inline-flex}
+
+/* janela de escolha da forma de pagamento / plano */
+#preview-dialog{border-radius:28px;max-width:min(560px,calc(100% - 24px));padding:clamp(26px,4vw,40px)}
+#preview-dialog h2{font-size:clamp(24px,3vw,32px);margin:10px 0 8px}
+#preview-dialog #dialog-message{font-size:16px;margin-bottom:18px}
+.pay-options{display:grid;gap:12px;margin:6px 0 14px}
+.pay-option{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-decoration:none;border-radius:20px;padding:18px 22px;border:1.5px solid #e4cc9855;background:#16130d;color:#f5f3ed;transition:border-color .2s,transform .2s}
+.pay-option:hover{border-color:#f3cf75;transform:translateY(-2px)}
+.pay-option b{font-family:var(--f-t);font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.02em}
+.pay-option span{font-size:15px;color:#ddd3bf}
+.pay-option.destaque{background:linear-gradient(120deg,#f2ce70,#c8912d);border-color:#e7be60;color:#141109}
+.pay-option.destaque span{color:#2c2410}
+.pay-note{font-size:13px;color:#a9a296;margin:4px 0 0}
+.dialog-dismiss[hidden]{display:none}
+
+@media (max-width:760px){
+  body{font-size:16px}
+  .hero-copy h1{font-size:clamp(21px,6.3vw,27px);margin:8px 0 10px;line-height:1.08}
+  .hero-copy p:not(.eyebrow){font-size:13.5px;line-height:1.5;margin:0 0 7px}
+  .hero-copy .cta{min-height:50px;padding:14px 16px;margin-top:6px}
+  .cta,.hero-copy .cta,.paths .cta,.closing .cta,.offer .cta{width:100%;font-size:13px;padding:17px 18px}
+  .approved-body>p,.offer p{font-size:16px}
+  .eyebrow{font-size:11px}
+}
