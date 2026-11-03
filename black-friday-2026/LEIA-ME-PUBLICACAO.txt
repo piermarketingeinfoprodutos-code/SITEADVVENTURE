@@ -1,6 +1,13 @@
 PÁGINA BLACK FRIDAY 2026 VERSÃO FINAL ADVENTURE
 Marca apresentada na página: Advventure Contabilidade.
 
+NO AR (atualizado em 03/11/2026)
+- Provisório principal: https://expertemtributario.com.br/black-advventure/
+  (pasta black-advventure dentro do public_html de expertemtributario.com.br, plano da agência Lura)
+- Cópia no GitHub: https://piermarketingeinfoprodutos-code.github.io/SITEADVVENTURE/black-friday-2026/
+- Definitivo: advventure.com.br/black-friday, quando o acesso à Hostinger da Advventure for localizado
+  (o domínio não está no plano da Lura). A página mantém noindex enquanto for provisória.
+
 1. COMO PUBLICAR NO DOMÍNIO
 Extraia o ZIP. Envie o CONTEÚDO desta pasta para a pasta pública do domínio
 (normalmente public_html, www ou equivalente) ou para uma subpasta de campanha.
